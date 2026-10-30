@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yarda – Study the Bible. Present it live.</title>
+<meta name="description" content="Yarda is a free, open-source Bible app for Mac and Windows. Read, search and dig into the original languages, then run scripture and songs on the church screen.">
+<meta name="theme-color" content="#0b0b0a">
+<meta property="og:title" content="Yarda – Study the Bible. Present it live.">
+<meta property="og:description" content="Free, open-source Bible study and live scripture presentation for Mac and Windows.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4.500-4.500M12 15l4.500-4.500M5 20h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m0 0-5-5m5 5-5 5"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/></symbol>
+  <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h10"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1"/></symbol>
+  <symbol id="i-compare" viewBox="0 0 24 24"><rect x="3" y="5" width="11" height="14" rx="1.5"/><rect x="10" y="5" width="11" height="14" rx="1.5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="nav-in wrap">
+    <a class="brand" href="#top" aria-label="Yarda, back to top">
+      <img src="assets/icon-128.png" width="28" height="28" alt="" class="brand-icon">
+      <span>Yarda</span>
+    </a>
+    <nav class="nav-links" aria-label="Page">
+      <a href="#why">Why Yarda</a>
+      <a href="#study">Study</a>
+      <a href="#present">Present</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <div class="nav-end">
+      <a class="nav-text" href="https://github.com/yarda-studio/desktop">GitHub</a>
+      <a class="pill" href="#download" data-download-link>Download</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ───────── Hero ───────── -->
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero-copy" data-load>
+    <h1 id="hero-title">Study the Bible. Present it live.</h1>
+    <p class="lede">A free, open-source Bible app for Mac and Windows. Read and search in your own time, then put scripture and songs on the church screen when it counts.</p>
+    <div class="cta-row">
+      <a class="pill pill-lg" href="#download" data-primary-download>
+        <svg class="ico" aria-hidden="true"><use href="#i-down"/></svg>
+        <span data-primary-label>Download Yarda</span>
+      </a>
+      <a class="ghost-link" href="#try">Try it below <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <p class="fine" data-version-note>Free and open source, GPLv3 licensed.</p>
+  </div>
+
+  <div class="console-wrap" id="try" data-load>
+    <div class="console" data-ui role="group" aria-label="Yarda Live Show console, interactive demo">
+      <div class="c-top">
+        <div class="c-tabs"><b class="on">Scriptures</b><b>Slides</b><b>Songs</b></div>
+        <div class="c-live"><b id="live-chip" class="chip-live"><i></i>LIVE</b><b>BLACK</b><b class="dim">CLEAR</b></div>
+        <div class="c-icons" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+
+      <div class="c-body">
+        <section class="c-pane c-sched" aria-label="Schedule">
+          <header><h2>Schedule</h2><span>Edit</span></header>
+          <ul id="sched-list">
+            <li><button type="button" data-ref="Psalm 23:1">Psalm 23:1 <small>KJV</small></button></li>
+            <li><button type="button" data-ref="John 3:16">John 3:16 <small>KJV</small></button></li>
+            <li><button type="button" data-ref="Romans 8:28">Romans 8:28 <small>KJV</small></button></li>
+            <li><button type="button" data-ref="Hebrews 11:1">Hebrews 11:1 <small>KJV</small></button></li>
+          </ul>
+        </section>
+
+        <section class="c-pane c-prev" aria-label="Preview">
+          <header>
+            <h2>Preview <span id="prev-title">Psalm 23:1</span></h2>
+            <div class="c-actions">
+              <button type="button" class="c-btn" id="queue-btn" title="Add to schedule"><svg aria-hidden="true"><use href="#i-play"/></svg>Queue</button>
+              <button type="button" class="c-btn c-go" id="go-live" disabled><svg aria-hidden="true"><use href="#i-play"/></svg>Go Live</button>
+            </div>
+          </header>
+          <div class="c-verse" id="prev-verse">
+            <p class="c-ref" id="prev-ref">Psalm 23:1 · KJV</p>
+            <p class="c-text" id="prev-text">The LORD is my shepherd; I shall not want.</p>
+          </div>
+        </section>
+
+        <section class="c-pane c-livepane" aria-label="Live">
+          <header><h2>Live</h2></header>
+          <figure class="slide" id="slide" aria-live="polite">
+            <blockquote class="slide-text" id="slide-text">The LORD is my shepherd; I shall not want.</blockquote>
+            <p class="slide-ref" id="slide-ref">Psalm 23:1 · KJV</p>
+          </figure>
+          <p class="c-out">Output on Display 2</p>
+        </section>
+      </div>
+
+      <div class="c-lib">
+        <form class="c-bar" id="demo-form" role="search" autocomplete="off">
+          <label class="sr-only" for="demo-input">Search the demo: a verse, a word, or a question</label>
+          <svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>
+          <input id="demo-input" type="text" spellcheck="false" autocomplete="off" placeholder="Verse (jn 3:16), a word, or ? to ask" aria-controls="demo-results">
+        </form>
+        <div class="c-try" id="demo-hint">
+          <span>Try</span>
+          <button type="button" class="chip" data-try="rom 8:28">rom 8:28</button>
+          <button type="button" class="chip" data-try="shepherd">shepherd</button>
+          <button type="button" class="chip" data-try="? verses about hope">? verses about hope</button>
+        </div>
+        <ul class="c-results" id="demo-results" hidden></ul>
+      </div>
+    </div>
+    <p class="fine console-note">A working demo with 24 verses (KJV). Pick a result, then press Go Live. The app has the whole Bible.</p>
+  </div>
+</section>
+
+<!-- ───────── Facts ───────── -->
+<section class="facts wrap" aria-label="At a glance">
+  <ul>
+    <li><b>Free</b><span>and open source, MIT licensed</span></li>
+    <li><b>Mac and Windows</b><span>native desktop app</span></li>
+    <li><b>KJV included</b><span>with Strong's and cross-references</span></li>
+    <li><b>Your notes stay yours</b><span>stored on your own computer</span></li>
+  </ul>
+</section>
+
+<!-- ───────── Statement ───────── -->
+<section class="statement wrap" id="why" data-reveal>
+  <p><span>A Bible app for the whole week.</span> Read, search and study the original languages on Monday, then run scripture and songs on the church screen on Sunday. One free app, built for both.</p>
+</section>
+
+<!-- ───────── Three cards ───────── -->
+<section class="cards wrap" aria-label="What Yarda is built for">
+  <article class="card" data-reveal>
+    <div class="card-art" data-ui aria-hidden="true">
+      <p class="v"><b>28</b><span>…work together for <u>good<sup>G18</sup></u> to them that <u>love<sup>G25</sup></u> God…</span></p>
+    </div>
+    <h3>Made for study</h3>
+    <p>Double-click a word to open its Hebrew or Greek entry. Cross-references, commentary, notes and bookmarks sit on every verse.</p>
+  </article>
+  <article class="card" data-reveal>
+    <div class="card-art" data-ui aria-hidden="true">
+      <div class="mini-slide"><span>Psalm 23:1</span></div>
+      <div class="mini-live"><b><i></i>LIVE</b><b>BLACK</b></div>
+    </div>
+    <h3>Made for the screen</h3>
+    <p>A Live Show console with a schedule, a preview and a live panel. Nothing reaches the audience until you send it.</p>
+  </article>
+  <article class="card" data-reveal>
+    <div class="card-art" data-ui aria-hidden="true">
+      <div class="mini-bar"><svg><use href="#i-search"/></svg><span>nt/grace</span></div>
+      <div class="mini-keys"><kbd>Ctrl</kbd><kbd>K</kbd></div>
+    </div>
+    <h3>Fast, and yours</h3>
+    <p>One search bar, keyboard-first. Notes, bookmarks and history live in a database on your computer, and installed Bibles read without a connection.</p>
+  </article>
+</section>
+
+<!-- ───────── Feature: Study ───────── -->
+<section class="feature wrap" id="study" aria-labelledby="study-title">
+  <div class="feature-copy" data-reveal>
+    <h2 id="study-title">Read the text.<br>Then the words behind it.</h2>
+    <p>Jump to any verse by typing it. Open the Strong's entry behind a word with a double-click, and switch between the Yarda lexicon, BDB and Abbott-Smith, Thayer and the full LSJ.</p>
+    <ul class="ticks">
+      <li>Parallel translations that scroll together</li>
+      <li>Commentary, cross-references and notes on every verse</li>
+      <li>Focus mode when you just want the page</li>
+    </ul>
+  </div>
+  <div class="frame" data-reveal aria-hidden="true">
+    <div class="ui frag-study" data-ui>
+      <div class="ui-head"><span class="ui-title">Romans 8</span><span class="ui-nav"><i>‹</i><i>›</i></span></div>
+      <p class="v"><b>26</b><span>Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered.</span></p>
+      <p class="v sel"><b>28</b><span>And we know that all things work together for <u class="on">good<sup>G18</sup></u> to them that <u>love<sup>G25</sup></u> God, to them who are the called according to his purpose.</span>
+        <span class="tools"><svg><use href="#i-copy"/></svg><svg><use href="#i-note"/></svg><svg><use href="#i-bookmark"/></svg><svg><use href="#i-book"/></svg><svg><use href="#i-link"/></svg><svg><use href="#i-compare"/></svg></span>
+      </p>
+      <p class="v"><b>29</b><span>For whom he did foreknow, he also did predestinate to be conformed to the image of his Son, that he might be the firstborn among many brethren.</span></p>
+      <div class="lex-card">
+        <p class="lex-num">G18 · ἀγαθός <small>agathos</small></p>
+        <p class="lex-def">good</p>
+        <div class="pills"><span class="on">Yarda</span><span>BDB / Abbott-Smith</span><span>Thayer</span><span>Full LSJ</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── Feature: One bar ───────── -->
+<section class="feature feature-flip wrap" aria-labelledby="bar-title">
+  <div class="frame" data-reveal aria-hidden="true">
+    <div class="ui frag-search" data-ui>
+      <div class="sbar"><svg><use href="#i-search"/></svg><span class="chip-s">NT</span><span class="typed">grace</span></div>
+      <ul>
+        <li><b>Ephesians 2:8</b><span>For by <mark>grace</mark> are ye saved through faith; and that not of yourselves: it is the gift of God:</span></li>
+        <li><b>John 1:17</b><span>For the law was given by Moses, but <mark>grace</mark> and truth came by Jesus Christ.</span></li>
+        <li><b>Titus 2:11</b><span>For the <mark>grace</mark> of God that bringeth salvation hath appeared to all men,</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="feature-copy" data-reveal>
+    <h2 id="bar-title">One bar.<br>It knows what you meant.</h2>
+    <p>Type a reference to jump, a word to search the text, or a quoted phrase to match exactly. Put <b>nt/</b> or <b>john,romans/</b> in front to search only there. Start with a question mark and ask in plain words.</p>
+    <ul class="ticks">
+      <li>Filters for testament, books and whole words</li>
+      <li>Ask Scripture finds passages by description</li>
+      <li>Every search is kept in your history</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────── Feature: Present ───────── -->
+<section class="feature wrap" id="present" aria-labelledby="present-title">
+  <div class="feature-copy" data-reveal>
+    <h2 id="present-title">Sunday morning,<br>without the stress.</h2>
+    <p>Build the order of service ahead of time. On the day, preview each verse, send it with one key, and cut to black or a standby screen the moment something goes wrong.</p>
+    <ul class="ticks">
+      <li>Output window on your projector or second display</li>
+      <li>Songs on the same screen, with their own library</li>
+      <li>A Customization Studio for the look of the output</li>
+    </ul>
+  </div>
+  <div class="frame" data-reveal aria-hidden="true">
+    <div class="ui frag-keys" data-ui>
+      <h3>Before the service</h3>
+      <ul>
+        <li><span>Add a verse to the schedule</span><kbd>Ctrl Q</kbd></li>
+        <li><span>Jump to any passage</span><kbd>Ctrl K</kbd></li>
+        <li><span>Choose the projector display</span><kbd>Outputs</kbd></li>
+      </ul>
+      <h3>During the service</h3>
+      <ul>
+        <li><span>Step through the verses</span><kbd>← →</kbd></li>
+        <li><span>Send the verse to the screen</span><kbd>Enter</kbd></li>
+        <li><span>Show more of the chapter</span><kbd>Ctrl 1–4</kbd></li>
+      </ul>
+      <h3>When something goes wrong</h3>
+      <ul>
+        <li><span>Black out the screen</span><kbd>C</kbd></li>
+        <li><span>Standby screen</span><kbd>Ctrl Shift E</kbd></li>
+        <li><span>Take the last verse back</span><kbd>Backspace</kbd></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── Feature: Make it yours ───────── -->
+<section class="feature feature-flip wrap" aria-labelledby="theme-title">
+  <div class="frame" data-reveal aria-hidden="true">
+    <div class="ui frag-theme" data-ui>
+      <div class="swatches">
+        <i style="--c:#1c1b19"></i><i style="--c:#5b5bf0"></i><i style="--c:#2563eb"></i><i style="--c:#0f766e"></i><i style="--c:#15803d"></i><i style="--c:#a16207" class="on"></i><i style="--c:#c2410c"></i><i style="--c:#e11d48"></i>
+      </div>
+      <div class="themes">
+        <div class="mini t1"><span>Psalm 23:1</span></div>
+        <div class="mini t2"><span>Psalm 23:1</span></div>
+        <div class="mini t3"><span>Psalm 23:1</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="feature-copy" data-reveal>
+    <h2 id="theme-title">Make it look<br>like your church.</h2>
+    <p>Eight accent colours and light or dark for the app. For the screen, the Customization Studio sets the font, size and spacing of what the congregation sees.</p>
+    <ul class="ticks">
+      <li>Light, dark or follow your system</li>
+      <li>Text size by keyboard, from 14 to 98</li>
+      <li>Replay the built-in tour any time</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────── Real pictures ───────── -->
+<section class="history" aria-label="Bibles through history">
+  <div class="strip">
+    <img src="assets/kjv-1611-title.jpg" width="1004" height="1500" loading="lazy" alt="The engraved title page of the 1611 King James Bible: Moses and Aaron flank the title, with the apostles above.">
+    <img src="assets/gutenberg-proverbs.jpg" width="1061" height="1500" loading="lazy" alt="An illuminated page from the Gutenberg Bible, the start of the Proverbs of Solomon, with a decorated initial and vine border.">
+    <img src="assets/kjv-1611-new-testament.jpg" width="900" height="1500" loading="lazy" alt="The engraved title page of the New Testament from the 1611 King James Bible, framed by tribes and apostles.">
+  </div>
+  <p class="wrap history-line" data-reveal>The same book, read for centuries. Yarda is a new way to open it.</p>
+</section>
+
+<!-- ───────── FAQ ───────── -->
+<section class="faq wrap" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title" data-reveal>Questions</h2>
+  <div class="faq-text" data-reveal>
+    <p><b>Is Yarda really free?</b> Yes. It is open source under the MIT licence. Ask Scripture, the plain-words search, uses a free account and has a daily limit.</p>
+    <p><b>Which computers does it run on?</b> Macs with Apple silicon (M1 and later) and 64-bit Windows. Intel Macs and Linux are not built yet, and because the code is open you can build it yourself.</p>
+    <p><b>Which Bibles come with it?</b> The King James Version installs on first launch, along with the Strong's Greek and Hebrew lexicons and the Treasury of Scripture Knowledge. More translations, commentaries and lexicons install from the Modules library.</p>
+    <p><b>Can I use it in a church service?</b> That is what Presentation mode is for: a Live Show console, an output window for your projector, a schedule, songs, and black and standby screens.</p>
+    <p><b>How do I switch between Study and Presentation?</b> Pick one when you first open the app, and change it any time in Settings under General.</p>
+    <p><b>What is Ask Scripture?</b> Describe what you are looking for, such as verses about hope, and it suggests passages. Start the search bar with a question mark. It needs an internet connection and a free account.</p>
+    <p><b>Does it work offline?</b> Installed Bibles live on your computer, so reading and searching do not need a connection. Installing modules, updates and Ask Scripture do.</p>
+    <p><b>Where are my notes kept?</b> In a database on your own computer. Cloud sync is not available yet.</p>
+    <p><b>Does it update itself?</b> Yes. Yarda checks for new releases and installs them when you agree.</p>
+    <p><b>Is there a tour?</b> The first time you open Yarda it offers a hands-on tour of whichever mode you chose, and you can replay it from Settings.</p>
+    <p><b>Something is broken. Who do I tell?</b> Open an issue on GitHub, or use Send feedback in Settings.</p>
+  </div>
+</section>
+
+<!-- ───────── Download ───────── -->
+<section class="get wrap" id="download" aria-labelledby="get-title">
+  <div class="get-copy" data-reveal>
+    <h2 id="get-title">Get Yarda</h2>
+    <p id="get-sub">Free for Mac and Windows. Open the installer, then open Yarda. The King James Version installs on first launch.</p>
+    <p class="fine" id="get-meta">Latest release on GitHub.</p>
+  </div>
+  <div class="get-cells" data-reveal>
+    <a class="get-cell" id="dl-mac" href="https://github.com/yarda-studio/desktop/releases/latest">
+      <svg class="ico" aria-hidden="true"><use href="#i-down"/></svg>
+      <span class="get-name">macOS</span>
+      <span class="get-detail" data-detail>Apple silicon (M1 and later)</span>
+    </a>
+    <a class="get-cell" id="dl-win" href="https://github.com/yarda-studio/desktop/releases/latest">
+      <svg class="ico" aria-hidden="true"><use href="#i-down"/></svg>
+      <span class="get-name">Windows</span>
+      <span class="get-detail" data-detail>64-bit installer</span>
+    </a>
+    <p class="get-alt"><a href="https://github.com/yarda-studio/desktop/releases/latest" id="dl-all">All files and release notes</a><span id="dl-msi-wrap" hidden> · <a id="dl-msi" href="#">Windows .msi</a></span></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in wrap">
+    <div class="foot-brand">
+      <a class="brand" href="#top"><img src="assets/icon-128.png" width="28" height="28" alt="" class="brand-icon"><span>Yarda</span></a>
+      <p>Study the Bible. Present it live.</p>
+    </div>
+    <nav class="foot-col" aria-label="Product">
+      <h3>Product</h3>
+      <a href="#study">Study</a>
+      <a href="#present">Present</a>
+      <a href="#faq">Questions</a>
+      <a href="#download">Download</a>
+    </nav>
+    <nav class="foot-col" aria-label="Open source">
+      <h3>Open source</h3>
+      <a href="https://github.com/yarda-studio/desktop">Source code</a>
+      <a href="https://github.com/yarda-studio/desktop/releases">Release notes</a>
+      <a href="https://github.com/yarda-studio/desktop/issues">Report a problem</a>
+      <a href="https://github.com/yarda-studio/desktop/blob/main/LICENSE">GPLv3 licence</a>
+    </nav>
+  </div>
+  <p class="foot-note wrap">Pictures: the 1611 King James Bible title pages (Church of England, public domain) and a Gutenberg Bible page from the Wellcome Collection (<a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>), via Wikimedia Commons. Scripture quotations are from the King James Version, which is in the public domain. The SWORD module format is copyright The SWORD Project contributors; public-domain texts are freely distributable.</p>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
