@@ -321,6 +321,22 @@
     });
   });
 
+  /* ───────────── FAQ accordion ───────────── */
+
+  const faqItems = document.querySelectorAll(".faq-item");
+  faqItems.forEach((item) => {
+    const btn = item.querySelector(".faq-q");
+    btn.addEventListener("click", () => {
+      const opening = !item.classList.contains("is-open");
+      // One answer open at a time keeps the list short and easy to scan.
+      faqItems.forEach((other) => {
+        const on = other === item && opening;
+        other.classList.toggle("is-open", on);
+        other.querySelector(".faq-q").setAttribute("aria-expanded", String(on));
+      });
+    });
+  });
+
   /* ───────────── Reveal on scroll ───────────── */
 
   const items = document.querySelectorAll("[data-reveal]");
